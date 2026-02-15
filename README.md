@@ -52,12 +52,21 @@ Built with a modern tech stack and focused on accessibility and inclusivity.
 ```mermaid
 graph TD
     A[User Browser] --> B[React + Vite Frontend]
-    B --> C[Express.js Backend API]
-    C --> D[MongoDB]
-    C --> E[Cloudinary Media Storage]
-    B --> F[MediaPipe Hand Landmarker]
-    B --> G[TensorFlow.js / Python LSTM Model]
-    F & G --> H[Real-time Translation]
+
+    B --> C1[Static Sign to Text Model]
+    C1 --> C2[Text to Speech Engine]
+    C2 --> H1[Real-Time Translation Output]
+
+    B --> D1[MediaPipe Hand Landmarks]
+    D1 --> D2[Geometry Based Feedback Engine]
+    D2 --> H2[Confidence Score + Real-Time Correction]
+
+    B --> E1["LSTM Dynamic Gesture Model - Learning Module"]
+    E1 --> H3[Word-Level Prediction Experimental]
+
+    B --> F[Express Backend API]
+    F --> G[MongoDB]
+    F --> I[Cloudinary]
 ```
 ## Frontend
 
