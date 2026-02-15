@@ -41,10 +41,8 @@ Built with a modern tech stack and focused on accessibility and inclusivity.
 
 ## 🔗 Links
 
-- **Live Demo**: [signspeak.live](https://signspeak.live) *(replace with actual link)*
 - **GitHub Repository**: [github.com/yourusername/signspeak](https://github.com/yourusername/signspeak)
-- **Demo Video**: [YouTube Link](https://youtu.be/...)
-- **Project Presentation**: [Google Slides](...)
+- **Demo Video & Project Presentation**: [Link](https://drive.google.com/drive/folders/1y45y-E0XNwGGIpcIZisVOcAcBqTbmHao?usp=sharing)
 
 ## 🤖 Tech Stack
 
@@ -163,11 +161,18 @@ python backend/ai/common_words_server.py
 Access the app: http://localhost:3000
 # 👨‍💻 Team Members
 
-Anushree — Full Stack Developer & AI Integration
-GitHub: @anushree
+Anushree Upasham — Frontend Developer & AI Models
+GitHub: @annuuxoxo
+Sakshi Kalunge — ML+Mediapipe+Computer Vision
+Github: @SakshiKalunge07
+Shreya Mane — Backend Developer
+Github: @shreyamane1526
+Sofia Abidi — Backend Developer
+Github: @sofiaabidi
+
 
 (Add your teammates here)
-# 👨‍🏫 Mentors
+# Mentors
 
-Mentor Name — [GitHub/LinkedIn]
-Mentor Name — [GitHub/LinkedIn]
+Niharika Hariharan — [GitHub/LinkedIn]
+Sourish Phate — [GitHub/LinkedIn]
