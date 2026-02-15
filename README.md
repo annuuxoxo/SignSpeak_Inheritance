@@ -61,26 +61,26 @@ graph TD
 ```
 ## Frontend
 
-React 18 + Vite
-Tailwind CSS + Radix UI components
-React Webcam + MediaPipe Tasks Vision
-TensorFlow.js (for browser inference)
+* React 18 + Vite
+* Tailwind CSS + Radix UI components
+* React Webcam + MediaPipe Tasks Vision
+* TensorFlow.js (for browser inference)
 
 ## Backend
 
-- Node.js + Express
-MongoDB + Mongoose
-JWT Authentication
-Passport.js (Google + GitHub OAuth)
-Cloudinary (video/image hosting)
-Multer (file uploads)
+* Node.js + Express
+* MongoDB + Mongoose
+* JWT Authentication
+* Passport.js (Google + GitHub OAuth)
+* Cloudinary (video/image hosting)
+* Multer (file uploads)
 
 ## AI/ML
 
-MediaPipe Hand Landmarker (real-time hand tracking)
-Custom LSTM Model (TensorFlow/Keras) for common words
-Rule-based letter recognition with angle & distance analysis
-Python microservices (separate servers for models)
+* MediaPipe Hand Landmarker (real-time hand tracking)
+* Custom LSTM Model (TensorFlow/Keras) for common words
+* Rule-based letter recognition with angle & distance analysis
+* Python microservices (separate servers for models)
 
 ## Other Tools
 
