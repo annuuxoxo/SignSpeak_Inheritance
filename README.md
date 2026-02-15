@@ -189,6 +189,6 @@ Access the app: http://localhost:3000
 
 A huge shoutout for their constant support and guidance:
 
-- **Niharika Hariharan** — GitHub / LinkedIn  
-- **Sourish Phate** — GitHub / LinkedIn  
+- **Niharika Hariharan** [@niharika](https://github.com/23f2003701-1)
+- **Sourish Phate** [@sourishphate](https://github.com/sourishphate)
 
