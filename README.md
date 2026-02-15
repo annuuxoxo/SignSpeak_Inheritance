@@ -41,7 +41,7 @@ Built with a modern tech stack and focused on accessibility and inclusivity.
 
 ## 🔗 Links
 
-- **GitHub Repository**: [github.com/yourusername/signspeak](https://github.com/yourusername/signspeak)
+- **GitHub Repository**: [github.com/annuuxoxo/SignSpeak_Inheritance](https://github.com/annuuxoxo/SignSpeak_Inheritance)
 - **Demo Video & Project Presentation**: [Link](https://drive.google.com/drive/folders/1y45y-E0XNwGGIpcIZisVOcAcBqTbmHao?usp=sharing)
 
 ## 🤖 Tech Stack
@@ -159,20 +159,36 @@ pip install numpy tensorflow
 python backend/ai/common_words_server.py
 ```
 Access the app: http://localhost:3000
-# 👨‍💻 Team Members
+## Team Members
 
-Anushree Upasham — Frontend Developer & AI Models
-GitHub: @annuuxoxo
-Sakshi Kalunge — ML+Mediapipe+Computer Vision
-Github: @SakshiKalunge07
-Shreya Mane — Backend Developer
-Github: @shreyamane1526
-Sofia Abidi — Backend Developer
-Github: @sofiaabidi
+### 🌸 Anushree Upasham  
+**Role:** Frontend Developer & AI Models  
+**GitHub:** [@annuuxoxo](https://github.com/annuuxoxo)
 
+---
 
-(Add your teammates here)
-# Mentors
+### 🌸 Sakshi Kalunge  
+**Role:** ML • MediaPipe • Computer Vision  
+**GitHub:** [@SakshiKalunge07](https://github.com/SakshiKalunge07)
 
-Niharika Hariharan — [GitHub/LinkedIn]
-Sourish Phate — [GitHub/LinkedIn]
+---
+
+### 🌸 Shreya Mane  
+**Role:** Backend Developer  
+**GitHub:** [@shreyamane1526](https://github.com/shreyamane1526)
+
+---
+
+### 🌸 Sofia Abidi  
+**Role:** Backend Developer  
+**GitHub:** [@sofiaabidi](https://github.com/sofiaabidi)
+
+---
+
+## 🌟 Mentors
+
+A huge shoutout for their constant support and guidance:
+
+- **Niharika Hariharan** — GitHub / LinkedIn  
+- **Sourish Phate** — GitHub / LinkedIn  
+
