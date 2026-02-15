@@ -99,25 +99,25 @@ const seed = async () => {
         {
           title: "People & Relationships",
           lectures: [
-            { title: "Mother", type: "image" },
-            { title: "Father", type: "image" },
-            { title: "Friend", type: "image" }
+            { title: "Family", type: "image" },
+            { title: "Boy", type: "image" },
+            { title: "Student", type: "image" }
           ]
         },
         {
           title: "Places",
           lectures: [
-            { title: "Home", type: "image" },
-            { title: "School", type: "image" },
-            { title: "Hospital", type: "image" }
+            { title: "Museum", type: "image" },
+            { title: "Bookstore", type: "image" },
+            { title: "Address", type: "image" }
           ]
         },
         {
           title: "Objects",
           lectures: [
-            { title: "Phone", type: "image" },
-            { title: "Book", type: "image" },
-            { title: "Food", type: "image" }
+            { title: "Mouse", type: "image" },
+            { title: "Dictionary", type: "image" },
+            { title: "Desk", type: "image" }
           ]
         }
       ]
@@ -131,25 +131,25 @@ const seed = async () => {
         {
           title: "Actions",
           lectures: [
-            { title: "Eat", type: "video" },
-            { title: "Drink", type: "video" },
-            { title: "Go", type: "video" }
+            { title: "Walk", type: "video" },
+            { title: "Come Here", type: "video" },
+            { title: "Wear", type: "video" }
           ]
         },
         {
           title: "Emotions",
           lectures: [
-            { title: "Happy", type: "video" },
-            { title: "Sad", type: "video" },
-            { title: "Angry", type: "video" }
+            { title: "Joy", type: "video" },
+            { title: "Emotion", type: "video" },
+            { title: "Honest", type: "video" }
           ]
         },
         {
           title: "Movement & Direction",
           lectures: [
             { title: "Come Here", type: "video" },
-            { title: "Stop", type: "video" },
-            { title: "Help", type: "video" }
+            { title: "Up", type: "video" },
+            { title: "Down", type: "video" }
           ]
         }
       ]

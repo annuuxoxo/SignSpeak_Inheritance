@@ -27,37 +27,30 @@ const seed = async () => {
       complexity: "Intermediate",
       sections: [
         {
-          title: "Objects & Everyday Things",
+          title: "Starter Signs",
           lectures: [
-            { title: "Book", type: "video" },
-            { title: "Computer", type: "video" },
-            { title: "Chair", type: "video" },
-            { title: "Clothes", type: "video" },
-            { title: "Table", type: "video" },
-            { title: "Bed", type: "video" },
-            { title: "Hat", type: "video" },
-            { title: "Shirt", type: "video" }
-          ]
-        },
-        {
-          title: "Food & Drink",
-          lectures: [
-            { title: "Drink", type: "video" },
-            { title: "Candy", type: "video" },
-            { title: "Apple", type: "video" },
-            { title: "Pizza", type: "video" },
-            { title: "Fish", type: "video" }
-          ]
-        },
-        {
-          title: "Actions & Activities",
-          lectures: [
-            { title: "Go", type: "video" },
-            { title: "Walk", type: "video" },
-            { title: "Help", type: "video" },
-            { title: "Eat", type: "video" },
-            { title: "Play", type: "video" },
-            { title: "Study", type: "video" }
+            { title: "Come Here", type: "video" },
+            {
+              title: "Up",
+              type: "video",
+              description:
+                "How to sign: Raise the index finger of your dominant hand upward, as though pointing toward something above.\n\nWord definition: Direction toward a higher place.\n\nSynonyms: Above, Higher."
+            },
+            { title: "Down", type: "video" },
+            { title: "Time", type: "video" },
+            {
+              title: "Ball",
+              type: "video",
+              description:
+                "How to sign: With open hands and slightly curved fingers facing each other, repeatedly touch each fingertip to its corresponding one on the opposite hand.\n\nWord definition: Object - a round object you can throw, kick, or bounce.\n\nSynonyms: Sphere, Globe, Orb."
+            },
+            { title: "Desk", type: "video" },
+            {
+              title: "Mouse",
+              type: "video",
+              description:
+                "How to sign: Extend your pointer finger, tuck the other fingers into your palm, and gently brush your nose with the pointer finger a couple of times."
+            }
           ]
         }
       ]
@@ -69,49 +62,16 @@ const seed = async () => {
       complexity: "Intermediate",
       sections: [
         {
-          title: "People & Family",
+          title: "Starter Signs",
           lectures: [
-            { title: "Mother", type: "video" },
-            { title: "Woman", type: "video" },
-            { title: "Man", type: "video" },
-            { title: "Cousin", type: "video" },
-            { title: "Family", type: "video" }
-          ]
-        },
-        {
-          title: "Colors & Descriptions",
-          lectures: [
-            { title: "Black", type: "video" },
-            { title: "Blue", type: "video" },
-            { title: "White", type: "video" },
-            { title: "Orange", type: "video" },
-            { title: "Thin", type: "video" },
-            { title: "Tall", type: "video" }
-          ]
-        },
-        {
-          title: "Questions, Responses & Function Words",
-          lectures: [
-            { title: "Who", type: "video" },
-            { title: "What", type: "video" },
-            { title: "Yes", type: "video" },
-            { title: "No", type: "video" },
-            { title: "All", type: "video" }
-          ]
-        },
-        {
-          title: "Time & Sequence",
-          lectures: [
-            { title: "Before", type: "video" },
-            { title: "Now", type: "video" },
-            { title: "Year", type: "video" }
-          ]
-        },
-        {
-          title: "Feelings & States",
-          lectures: [
-            { title: "Fine", type: "video" },
-            { title: "Cool", type: "video" }
+            { title: "Family", type: "video" },
+            { title: "Boy", type: "video" },
+            { title: "Me", type: "video" },
+            { title: "Student", type: "video" },
+            { title: "Joy", type: "video" },
+            { title: "Big", type: "video" },
+            { title: "Hear", type: "video" },
+            { title: "Arm", type: "video" }
           ]
         }
       ]
@@ -136,7 +96,7 @@ const seed = async () => {
       for (const lec of sectionData.lectures) {
         const lecture = await Lecture.create({
           title: lec.title,
-          description: `ASL gesture for ${lec.title}`,
+          description: lec.description || `ASL gesture for ${lec.title}`,
           contentType: lec.type,
           courseId: course._id,
           sectionId: section._id,

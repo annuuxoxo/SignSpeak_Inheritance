@@ -28,6 +28,7 @@ import { Badge } from './components/ui/badge';
 
 import { VideoPlayer } from './components/video-player';
 import { CameraFeed } from './components/camera-feed';
+import { WordDetection } from './components/word-detection';
 import { apiFetch } from './api';
 
 interface Lecture {
@@ -138,8 +139,21 @@ export default function App({ courseId }: AppProps) {
   const totalLectures = allLectures.length;
   const progressPercentage = totalLectures > 0 ? (completedLectures / totalLectures) * 100 : 0;
   const isAlphabetCourse = !!course && /^Alphabet\s+[12]$/i.test(course.title.trim());
+  const isCommonWordsCourse = !!course && /^Common Words\s*[12]?$/i.test(course.title.trim());
   const targetLetterMatch = currentLecture?.title?.match(/Letter\s+([A-Z])/i);
   const targetLetter = targetLetterMatch?.[1]?.toUpperCase() || null;
+  
+  // Extract target word for Common Words courses (e.g., "Word: family" or just "family")
+  const targetWordMatch = isCommonWordsCourse ? currentLecture?.title?.match(/(?:Word:\s*)?([a-z\s]+)/i) : null;
+  const targetWord = targetWordMatch?.[1]?.trim().toLowerCase() || null;
+
+  // Extract all valid words from the course for filtering predictions
+  const validWords = isCommonWordsCourse 
+    ? allLectures.map(lec => {
+        const match = lec.title?.match(/(?:Word:\s*)?([a-z\s]+)/i);
+        return match?.[1]?.trim().toLowerCase();
+      }).filter(Boolean) as string[]
+    : [];
 
   useEffect(() => {
     if (darkMode) {
@@ -347,13 +361,23 @@ export default function App({ courseId }: AppProps) {
                 />
 
                 <div className="space-y-4">
-                  <CameraFeed
-                    isActive={showCamera}
-                    onToggle={() => setShowCamera(!showCamera)}
-                    targetLetter={isAlphabetCourse ? targetLetter : null}
-                    enableFeedback={isAlphabetCourse}
-                    onFeedback={handleAiFeedback}
-                  />
+                  {isCommonWordsCourse ? (
+                    <WordDetection
+                      isActive={showCamera}
+                      onToggle={() => setShowCamera(!showCamera)}
+                      targetWord={targetWord}
+                      validWords={validWords}
+                      onFeedback={handleAiFeedback}
+                    />
+                  ) : (
+                    <CameraFeed
+                      isActive={showCamera}
+                      onToggle={() => setShowCamera(!showCamera)}
+                      targetLetter={isAlphabetCourse ? targetLetter : null}
+                      enableFeedback={isAlphabetCourse}
+                      onFeedback={handleAiFeedback}
+                    />
+                  )}
                   
                   {currentLecture?.description && (
                     <Card className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-4 border border-gray-200 dark:border-gray-700">
@@ -381,7 +405,8 @@ export default function App({ courseId }: AppProps) {
                 </div>
               </div>
 
-              <Card className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-6 border border-gray-200 dark:border-gray-700">
+              {!isCommonWordsCourse && (
+                <Card className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-6 border border-gray-200 dark:border-gray-700">
                 <div className="flex items-center justify-between mb-4">
                   <h2 className="font-semibold text-lg text-gray-900 dark:text-white">AI Feedback & Suggestions</h2>
                   {isAlphabetCourse ? (
@@ -467,7 +492,8 @@ export default function App({ courseId }: AppProps) {
                     })
                   )}
                 </div>
-              </Card>
+                </Card>
+              )}
 
               <div className="flex items-center justify-center gap-3">
                 <Button
